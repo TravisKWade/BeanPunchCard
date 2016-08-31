@@ -6,13 +6,13 @@
 //  Copyright © 2016 Branvis Software. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CustomerListViewController.h"
 
-@interface ViewController ()
+@interface CustomerListViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CustomerListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

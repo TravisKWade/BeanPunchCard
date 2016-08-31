@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CounterViewController.h
 //  PunchCard
 //
 //  Created by Travis Wade on 8/30/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CounterViewController : UIViewController
 
 @end
-
