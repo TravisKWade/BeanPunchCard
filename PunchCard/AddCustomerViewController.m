@@ -1,22 +1,24 @@
 //
-//  CounterViewController.m
+//  AddCustomerViewController.m
 //  PunchCard
 //
-//  Created by Travis Wade on 8/30/16.
+//  Created by Travis Wade on 9/21/16.
 //  Copyright © 2016 Branvis Software. All rights reserved.
 //
 
+#import "AddCustomerViewController.h"
 #import "CounterViewController.h"
 
-@interface CounterViewController ()
+@interface AddCustomerViewController ()
 
 @end
 
-@implementation CounterViewController
+@implementation AddCustomerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.errorLabel.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +26,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - button handler
 
-#pragma mark - Navigation
-
-- (void) popViewController {
-    [self.navigationController popViewControllerAnimated:YES];
+- (IBAction) addCustomerButtonPressed: (id)sender {
+    if (self.firstName.text.length > 0) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        self.errorLabel.hidden = NO;
+    }
+    
 }
 
 /*
+#pragma mark - Navigation
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

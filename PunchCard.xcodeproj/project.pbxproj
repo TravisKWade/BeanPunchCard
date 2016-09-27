@@ -15,6 +15,8 @@
 		1F4B53321D7671850000B126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B53311D7671850000B126 /* Assets.xcassets */; };
 		1F4B53351D7671850000B126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B53331D7671850000B126 /* LaunchScreen.storyboard */; };
 		1F4B533F1D76754E0000B126 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B533E1D76754E0000B126 /* CounterViewController.m */; };
+		1F6C3F631D94203000A25713 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C3F621D94203000A25713 /* CoreDataHelper.m */; };
+		1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		1F4B53361D7671850000B126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4B533D1D76754E0000B126 /* CounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterViewController.h; sourceTree = "<group>"; };
 		1F4B533E1D76754E0000B126 /* CounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewController.m; sourceTree = "<group>"; };
+		1F6C3F611D94203000A25713 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		1F6C3F621D94203000A25713 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		1FD9714E1D934C0700A694E5 /* AddCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomerViewController.h; sourceTree = "<group>"; };
+		1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,8 @@
 		1F4B53211D7671850000B126 /* PunchCard */ = {
 			isa = PBXGroup;
 			children = (
-				1F4B533C1D7674A30000B126 /* controllers */,
+				1F6C3F601D94200700A25713 /* helpers */,
+				1F4B533C1D7674A30000B126 /* view controllers */,
 				1F4B53251D7671850000B126 /* AppDelegate.h */,
 				1F4B53261D7671850000B126 /* AppDelegate.m */,
 				1F4B532B1D7671850000B126 /* Main.storyboard */,
@@ -84,15 +91,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1F4B533C1D7674A30000B126 /* controllers */ = {
+		1F4B533C1D7674A30000B126 /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1F4B53281D7671850000B126 /* CustomerListViewController.h */,
 				1F4B53291D7671850000B126 /* CustomerListViewController.m */,
 				1F4B533D1D76754E0000B126 /* CounterViewController.h */,
 				1F4B533E1D76754E0000B126 /* CounterViewController.m */,
+				1FD9714E1D934C0700A694E5 /* AddCustomerViewController.h */,
+				1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */,
 			);
-			name = controllers;
+			name = "view controllers";
+			sourceTree = "<group>";
+		};
+		1F6C3F601D94200700A25713 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F6C3F611D94203000A25713 /* CoreDataHelper.h */,
+				1F6C3F621D94203000A25713 /* CoreDataHelper.m */,
+			);
+			name = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +185,11 @@
 			files = (
 				1F4B532A1D7671850000B126 /* CustomerListViewController.m in Sources */,
 				1F4B53271D7671850000B126 /* AppDelegate.m in Sources */,
+				1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */,
 				1F4B53301D7671850000B126 /* PunchCard.xcdatamodeld in Sources */,
 				1F4B53241D7671850000B126 /* main.m in Sources */,
 				1F4B533F1D76754E0000B126 /* CounterViewController.m in Sources */,
+				1F6C3F631D94203000A25713 /* CoreDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +340,7 @@
 				1F4B533B1D7671850000B126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
