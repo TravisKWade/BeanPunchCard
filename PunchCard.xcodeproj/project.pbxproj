@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F324C781D9A8EBF00F85B48 /* Customer+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F324C751D9A8EBF00F85B48 /* Customer+CoreDataClass.m */; };
+		1F324C791D9A8EBF00F85B48 /* Customer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F324C771D9A8EBF00F85B48 /* Customer+CoreDataProperties.m */; };
 		1F4B53241D7671850000B126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B53231D7671850000B126 /* main.m */; };
 		1F4B53271D7671850000B126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B53261D7671850000B126 /* AppDelegate.m */; };
 		1F4B532A1D7671850000B126 /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B53291D7671850000B126 /* CustomerListViewController.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F324C741D9A8EBF00F85B48 /* Customer+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Customer+CoreDataClass.h"; path = "../Customer+CoreDataClass.h"; sourceTree = "<group>"; };
+		1F324C751D9A8EBF00F85B48 /* Customer+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Customer+CoreDataClass.m"; path = "../Customer+CoreDataClass.m"; sourceTree = "<group>"; };
+		1F324C761D9A8EBF00F85B48 /* Customer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Customer+CoreDataProperties.h"; path = "../Customer+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1F324C771D9A8EBF00F85B48 /* Customer+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Customer+CoreDataProperties.m"; path = "../Customer+CoreDataProperties.m"; sourceTree = "<group>"; };
 		1F4B531F1D7671850000B126 /* PunchCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunchCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4B53231D7671850000B126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F4B53251D7671850000B126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +56,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F324C7A1D9A8ECA00F85B48 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1F324C741D9A8EBF00F85B48 /* Customer+CoreDataClass.h */,
+				1F324C751D9A8EBF00F85B48 /* Customer+CoreDataClass.m */,
+				1F324C761D9A8EBF00F85B48 /* Customer+CoreDataProperties.h */,
+				1F324C771D9A8EBF00F85B48 /* Customer+CoreDataProperties.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		1F4B53161D7671850000B126 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +86,7 @@
 		1F4B53211D7671850000B126 /* PunchCard */ = {
 			isa = PBXGroup;
 			children = (
+				1F324C7A1D9A8ECA00F85B48 /* models */,
 				1F6C3F601D94200700A25713 /* helpers */,
 				1F4B533C1D7674A30000B126 /* view controllers */,
 				1F4B53251D7671850000B126 /* AppDelegate.h */,
@@ -184,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4B532A1D7671850000B126 /* CustomerListViewController.m in Sources */,
+				1F324C781D9A8EBF00F85B48 /* Customer+CoreDataClass.m in Sources */,
 				1F4B53271D7671850000B126 /* AppDelegate.m in Sources */,
+				1F324C791D9A8EBF00F85B48 /* Customer+CoreDataProperties.m in Sources */,
 				1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */,
 				1F4B53301D7671850000B126 /* PunchCard.xcdatamodeld in Sources */,
 				1F4B53241D7671850000B126 /* main.m in Sources */,

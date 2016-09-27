@@ -8,6 +8,7 @@
 
 #import "AddCustomerViewController.h"
 #import "CounterViewController.h"
+#import "CoreDataHelper.h"
 
 @interface AddCustomerViewController ()
 
@@ -31,7 +32,23 @@
 - (IBAction) addCustomerButtonPressed: (id)sender {
     if (self.firstName.text.length > 0) {
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [CoreDataHelper.sharedManager addCustomerWithFirstName:self.firstName.text andLastName:self.lastName.text withCompletion:^(BOOL success) {
+            if (success) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+                [self.delegate customerAdded];
+            } else {
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Saving Error"
+                                                                                         message:@"There was a problem saving the customers data"
+                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+                //We add buttons to the alert controller by creating UIAlertActions:
+                UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                                   style:UIAlertActionStyleDefault
+                                                                 handler:nil]; //You can use a block here to handle a press on this button
+                [alertController addAction:actionOk];
+                [self presentViewController:alertController animated:YES completion:nil];
+            }
+        }];
+
     } else {
         self.errorLabel.hidden = NO;
     }

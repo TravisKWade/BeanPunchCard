@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddCustomerViewController.h"
 
-@interface CustomerListViewController : UITableViewController
+@interface CustomerListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, AddCustomerDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
+
+@property (strong, nonatomic) NSArray *customerList;
 
 @end
 

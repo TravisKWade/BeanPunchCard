@@ -8,12 +8,13 @@
 
 #import "CoreDataHelper.h"
 #import "AppDelegate.h"
+#import "Customer+CoreDataClass.h"
 
 @implementation CoreDataHelper
 
 static CoreDataHelper *coreDataHelper;
 
-+ (CoreDataHelper *)sharedManager {
++ (CoreDataHelper *) sharedManager {
     if (!coreDataHelper) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -32,4 +33,45 @@ static CoreDataHelper *coreDataHelper;
     }
     return self;
 }
+
+#pragma mark - Add Methods
+
+- (void) addCustomerWithFirstName:(NSString *) firstName andLastName:(NSString *) lastName withCompletion: (void (^)(BOOL success))completion {
+    if(firstName.length > 0) {
+        if (coreDataHelper.context) {
+        Customer *customer = [NSEntityDescription insertNewObjectForEntityForName:@"Customer" inManagedObjectContext:self.context];
+        customer.firstName = firstName;
+        customer.lastName = lastName;
+        customer.punchCount = 0;
+        
+        NSError *error;
+        [coreDataHelper.context save:&error];
+        
+        if (!error) {
+            completion(YES);
+        } else {
+            completion(NO);
+        }
+        }
+    } else {
+        completion(NO);
+    }
+}
+
+#pragma mark - Get Methods
+
+- (NSArray *) getAllCustomers {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Customer" inManagedObjectContext:self.context];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sort]];
+    
+    NSError *error;
+    NSArray *customers = [self.context executeFetchRequest:fetchRequest error:&error];
+    
+    return customers;
+}
+
 @end
