@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    if (self.currentCustomer) {
+        self.customerNameLabel.text = [NSString stringWithFormat:@"%@ %@", self.currentCustomer.firstName, self.currentCustomer.lastName];
+        
+        [self setPunchedButtons];
+        [self updateEnabledButtons];
+        
+        self.overlayView.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,7 +33,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - button helpers
 
+- (void) setPunchedButtons {
+    
+    for (int i = 1; i < self.currentCustomer.punchCount; i++) {
+        // TODO: replace with a graphic
+        UIButton *currentButton = [self.view viewWithTag:i];
+        currentButton.enabled = NO;
+        currentButton.backgroundColor = [UIColor blackColor];
+    }
+}
 
+- (void) updateEnabledButtons {
+    
+}
 
 @end

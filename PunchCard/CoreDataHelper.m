@@ -65,8 +65,9 @@ static CoreDataHelper *coreDataHelper;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Customer" inManagedObjectContext:self.context];
     [fetchRequest setEntity:entity];
     
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
-    [fetchRequest setSortDescriptors:@[sort]];
+    NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+    NSArray *sortDescriptors = [NSArray arrayWithObject: sorter];
+    [fetchRequest setSortDescriptors:sortDescriptors];
     
     NSError *error;
     NSArray *customers = [self.context executeFetchRequest:fetchRequest error:&error];

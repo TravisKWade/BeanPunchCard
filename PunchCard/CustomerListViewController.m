@@ -9,6 +9,7 @@
 #import "CustomerListViewController.h"
 #import "CoreDataHelper.h"
 #import "Customer+CoreDataClass.h"
+#import "CounterViewController.h"
 
 @interface CustomerListViewController ()
 
@@ -30,8 +31,14 @@
 #pragma mark - Navigation
 
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-     AddCustomerViewController *addCustomerVC = (AddCustomerViewController *)segue.destinationViewController;
-     addCustomerVC.delegate = self;
+     if ([segue.identifier isEqualToString:@"counterSegue"]) {
+         CounterViewController *counterVC = (CounterViewController *)segue.destinationViewController;
+         NSIndexPath *indexPath = (NSIndexPath *) sender;
+         counterVC.currentCustomer = [self.customerList objectAtIndex:indexPath.row];
+     } else {
+         AddCustomerViewController *addCustomerVC = (AddCustomerViewController *)segue.destinationViewController;
+         addCustomerVC.delegate = self;
+     }
  }
 
 #pragma mark - add customer delegate
@@ -61,6 +68,10 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", customer.firstName, customer.lastName];
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"counterSegue" sender:indexPath];
 }
 
 

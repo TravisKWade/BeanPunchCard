@@ -19,6 +19,9 @@
 		1F4B533F1D76754E0000B126 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B533E1D76754E0000B126 /* CounterViewController.m */; };
 		1F6C3F631D94203000A25713 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C3F621D94203000A25713 /* CoreDataHelper.m */; };
 		1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */; };
+		1FFFD7BC1DA57BDA00EDE776 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7B91DA57BDA00EDE776 /* bean.jpg */; };
+		1FFFD7BD1DA57BDA00EDE776 /* cup.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7BA1DA57BDA00EDE776 /* cup.png */; };
+		1FFFD7C21DA57F2200EDE776 /* woodLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C11DA57F2200EDE776 /* woodLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		1F6C3F621D94203000A25713 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		1FD9714E1D934C0700A694E5 /* AddCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomerViewController.h; sourceTree = "<group>"; };
 		1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomerViewController.m; sourceTree = "<group>"; };
+		1FFFD7B91DA57BDA00EDE776 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bean.jpg; path = ../../bean.jpg; sourceTree = "<group>"; };
+		1FFFD7BA1DA57BDA00EDE776 /* cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cup.png; path = ../../cup.png; sourceTree = "<group>"; };
+		1FFFD7C11DA57F2200EDE776 /* woodLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = woodLogo.png; path = ../../woodLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,17 +92,18 @@
 		1F4B53211D7671850000B126 /* PunchCard */ = {
 			isa = PBXGroup;
 			children = (
-				1F324C7A1D9A8ECA00F85B48 /* models */,
-				1F6C3F601D94200700A25713 /* helpers */,
-				1F4B533C1D7674A30000B126 /* view controllers */,
+				1FFFD7B81DA576D100EDE776 /* images */,
 				1F4B53251D7671850000B126 /* AppDelegate.h */,
 				1F4B53261D7671850000B126 /* AppDelegate.m */,
-				1F4B532B1D7671850000B126 /* Main.storyboard */,
 				1F4B53311D7671850000B126 /* Assets.xcassets */,
-				1F4B53331D7671850000B126 /* LaunchScreen.storyboard */,
+				1F6C3F601D94200700A25713 /* helpers */,
 				1F4B53361D7671850000B126 /* Info.plist */,
+				1F4B53331D7671850000B126 /* LaunchScreen.storyboard */,
+				1F4B532B1D7671850000B126 /* Main.storyboard */,
+				1F324C7A1D9A8ECA00F85B48 /* models */,
 				1F4B532E1D7671850000B126 /* PunchCard.xcdatamodeld */,
 				1F4B53221D7671850000B126 /* Supporting Files */,
+				1F4B533C1D7674A30000B126 /* view controllers */,
 			);
 			path = PunchCard;
 			sourceTree = "<group>";
@@ -129,6 +136,16 @@
 				1F6C3F621D94203000A25713 /* CoreDataHelper.m */,
 			);
 			name = helpers;
+			sourceTree = "<group>";
+		};
+		1FFFD7B81DA576D100EDE776 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFD7C11DA57F2200EDE776 /* woodLogo.png */,
+				1FFFD7B91DA57BDA00EDE776 /* bean.jpg */,
+				1FFFD7BA1DA57BDA00EDE776 /* cup.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +205,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFFD7C21DA57F2200EDE776 /* woodLogo.png in Resources */,
 				1F4B53351D7671850000B126 /* LaunchScreen.storyboard in Resources */,
+				1FFFD7BC1DA57BDA00EDE776 /* bean.jpg in Resources */,
 				1F4B53321D7671850000B126 /* Assets.xcassets in Resources */,
 				1F4B532D1D7671850000B126 /* Main.storyboard in Resources */,
+				1FFFD7BD1DA57BDA00EDE776 /* cup.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
