@@ -35,13 +35,18 @@
 
 #pragma mark - button helpers
 
+- (IBAction) punchButtonPressed:(id) sender {
+    PunchButton *button = (PunchButton *) sender;
+    
+    [button setPunch];
+}
+
 - (void) setPunchedButtons {
     
-    for (int i = 1; i < self.currentCustomer.punchCount; i++) {
-        // TODO: replace with a graphic
-        UIButton *currentButton = [self.view viewWithTag:i];
-        currentButton.enabled = NO;
-        currentButton.backgroundColor = [UIColor blackColor];
+    for (int i = 1; i < 10; i++) {
+        
+
+        
     }
 }
 

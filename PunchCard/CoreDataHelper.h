@@ -13,10 +13,10 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
-+(CoreDataHelper *) sharedManager;
++ (CoreDataHelper *) sharedManager;
 
--(void) addCustomerWithFirstName:(NSString *) firstName andLastName:(NSString *) lastName withCompletion: (void (^)(BOOL success))completion;
-
--(NSArray *) getAllCustomers;
+- (void) addCustomerWithFirstName:(NSString *) firstName andLastName:(NSString *) lastName withCompletion: (void (^)(BOOL success))completion;
+- (NSArray *) getAllCustomers;
+- (void) 
 
 @end

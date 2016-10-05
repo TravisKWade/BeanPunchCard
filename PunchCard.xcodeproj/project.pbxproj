@@ -19,9 +19,12 @@
 		1F4B533F1D76754E0000B126 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B533E1D76754E0000B126 /* CounterViewController.m */; };
 		1F6C3F631D94203000A25713 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C3F621D94203000A25713 /* CoreDataHelper.m */; };
 		1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */; };
-		1FFFD7BC1DA57BDA00EDE776 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7B91DA57BDA00EDE776 /* bean.jpg */; };
-		1FFFD7BD1DA57BDA00EDE776 /* cup.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7BA1DA57BDA00EDE776 /* cup.png */; };
-		1FFFD7C21DA57F2200EDE776 /* woodLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C11DA57F2200EDE776 /* woodLogo.png */; };
+		1FFFD7C61DA58D9D00EDE776 /* PunchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C51DA58D9D00EDE776 /* PunchButton.m */; };
+		1FFFD7CB1DA5959200EDE776 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C71DA5959200EDE776 /* bean.jpg */; };
+		1FFFD7CC1DA5959200EDE776 /* cup.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C81DA5959200EDE776 /* cup.png */; };
+		1FFFD7CD1DA5959200EDE776 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C91DA5959200EDE776 /* logo.png */; };
+		1FFFD7CE1DA5959200EDE776 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7CA1DA5959200EDE776 /* wood.png */; };
+		1FFFD7D21DA5988A00EDE776 /* goCup.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7D11DA5988A00EDE776 /* goCup.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +49,13 @@
 		1F6C3F621D94203000A25713 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		1FD9714E1D934C0700A694E5 /* AddCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomerViewController.h; sourceTree = "<group>"; };
 		1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomerViewController.m; sourceTree = "<group>"; };
-		1FFFD7B91DA57BDA00EDE776 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bean.jpg; path = ../../bean.jpg; sourceTree = "<group>"; };
-		1FFFD7BA1DA57BDA00EDE776 /* cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cup.png; path = ../../cup.png; sourceTree = "<group>"; };
-		1FFFD7C11DA57F2200EDE776 /* woodLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = woodLogo.png; path = ../../woodLogo.png; sourceTree = "<group>"; };
+		1FFFD7C41DA58D9D00EDE776 /* PunchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchButton.h; sourceTree = "<group>"; };
+		1FFFD7C51DA58D9D00EDE776 /* PunchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchButton.m; sourceTree = "<group>"; };
+		1FFFD7C71DA5959200EDE776 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bean.jpg; sourceTree = "<group>"; };
+		1FFFD7C81DA5959200EDE776 /* cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cup.png; sourceTree = "<group>"; };
+		1FFFD7C91DA5959200EDE776 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1FFFD7CA1DA5959200EDE776 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood.png; sourceTree = "<group>"; };
+		1FFFD7D11DA5988A00EDE776 /* goCup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goCup.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +99,7 @@
 		1F4B53211D7671850000B126 /* PunchCard */ = {
 			isa = PBXGroup;
 			children = (
+				1FFFD7C31DA58C5F00EDE776 /* custom views */,
 				1FFFD7B81DA576D100EDE776 /* images */,
 				1F4B53251D7671850000B126 /* AppDelegate.h */,
 				1F4B53261D7671850000B126 /* AppDelegate.m */,
@@ -141,11 +149,22 @@
 		1FFFD7B81DA576D100EDE776 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				1FFFD7C11DA57F2200EDE776 /* woodLogo.png */,
-				1FFFD7B91DA57BDA00EDE776 /* bean.jpg */,
-				1FFFD7BA1DA57BDA00EDE776 /* cup.png */,
+				1FFFD7D11DA5988A00EDE776 /* goCup.png */,
+				1FFFD7C71DA5959200EDE776 /* bean.jpg */,
+				1FFFD7C81DA5959200EDE776 /* cup.png */,
+				1FFFD7C91DA5959200EDE776 /* logo.png */,
+				1FFFD7CA1DA5959200EDE776 /* wood.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		1FFFD7C31DA58C5F00EDE776 /* custom views */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFD7C41DA58D9D00EDE776 /* PunchButton.h */,
+				1FFFD7C51DA58D9D00EDE776 /* PunchButton.m */,
+			);
+			name = "custom views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,12 +224,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FFFD7C21DA57F2200EDE776 /* woodLogo.png in Resources */,
 				1F4B53351D7671850000B126 /* LaunchScreen.storyboard in Resources */,
-				1FFFD7BC1DA57BDA00EDE776 /* bean.jpg in Resources */,
+				1FFFD7CB1DA5959200EDE776 /* bean.jpg in Resources */,
+				1FFFD7D21DA5988A00EDE776 /* goCup.png in Resources */,
+				1FFFD7CD1DA5959200EDE776 /* logo.png in Resources */,
 				1F4B53321D7671850000B126 /* Assets.xcassets in Resources */,
 				1F4B532D1D7671850000B126 /* Main.storyboard in Resources */,
-				1FFFD7BD1DA57BDA00EDE776 /* cup.png in Resources */,
+				1FFFD7CC1DA5959200EDE776 /* cup.png in Resources */,
+				1FFFD7CE1DA5959200EDE776 /* wood.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +246,7 @@
 				1F324C781D9A8EBF00F85B48 /* Customer+CoreDataClass.m in Sources */,
 				1F4B53271D7671850000B126 /* AppDelegate.m in Sources */,
 				1F324C791D9A8EBF00F85B48 /* Customer+CoreDataProperties.m in Sources */,
+				1FFFD7C61DA58D9D00EDE776 /* PunchButton.m in Sources */,
 				1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */,
 				1F4B53301D7671850000B126 /* PunchCard.xcdatamodeld in Sources */,
 				1F4B53241D7671850000B126 /* main.m in Sources */,
