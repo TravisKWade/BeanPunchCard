@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1ABD141DA6EA1E000B72E8 /* app icon 167x167.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1ABD131DA6EA1E000B72E8 /* app icon 167x167.png */; };
 		1F324C781D9A8EBF00F85B48 /* Customer+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F324C751D9A8EBF00F85B48 /* Customer+CoreDataClass.m */; };
 		1F324C791D9A8EBF00F85B48 /* Customer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F324C771D9A8EBF00F85B48 /* Customer+CoreDataProperties.m */; };
 		1F4B53241D7671850000B126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B53231D7671850000B126 /* main.m */; };
@@ -19,6 +20,13 @@
 		1F4B533F1D76754E0000B126 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B533E1D76754E0000B126 /* CounterViewController.m */; };
 		1F6C3F631D94203000A25713 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C3F621D94203000A25713 /* CoreDataHelper.m */; };
 		1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */; };
+		1FE2AEFF1DA6F345006BAD21 /* app icon 20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2AEF81DA6F345006BAD21 /* app icon 20x20.png */; };
+		1FE2AF001DA6F345006BAD21 /* app icon 29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2AEF91DA6F345006BAD21 /* app icon 29x29.png */; };
+		1FE2AF011DA6F345006BAD21 /* app icon 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2AEFA1DA6F345006BAD21 /* app icon 40x40.png */; };
+		1FE2AF021DA6F345006BAD21 /* app icon 58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2AEFB1DA6F345006BAD21 /* app icon 58x58.png */; };
+		1FE2AF031DA6F345006BAD21 /* app icon 76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2AEFC1DA6F345006BAD21 /* app icon 76x76.png */; };
+		1FE2AF041DA6F345006BAD21 /* app icon 80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2AEFD1DA6F345006BAD21 /* app icon 80x80.png */; };
+		1FE2AF051DA6F345006BAD21 /* app icon 152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2AEFE1DA6F345006BAD21 /* app icon 152x152.png */; };
 		1FFFD7C61DA58D9D00EDE776 /* PunchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C51DA58D9D00EDE776 /* PunchButton.m */; };
 		1FFFD7CB1DA5959200EDE776 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C71DA5959200EDE776 /* bean.jpg */; };
 		1FFFD7CC1DA5959200EDE776 /* cup.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFD7C81DA5959200EDE776 /* cup.png */; };
@@ -28,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1ABD131DA6EA1E000B72E8 /* app icon 167x167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 167x167.png"; sourceTree = "<group>"; };
 		1F324C741D9A8EBF00F85B48 /* Customer+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Customer+CoreDataClass.h"; path = "../Customer+CoreDataClass.h"; sourceTree = "<group>"; };
 		1F324C751D9A8EBF00F85B48 /* Customer+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Customer+CoreDataClass.m"; path = "../Customer+CoreDataClass.m"; sourceTree = "<group>"; };
 		1F324C761D9A8EBF00F85B48 /* Customer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Customer+CoreDataProperties.h"; path = "../Customer+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -49,6 +58,13 @@
 		1F6C3F621D94203000A25713 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		1FD9714E1D934C0700A694E5 /* AddCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomerViewController.h; sourceTree = "<group>"; };
 		1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomerViewController.m; sourceTree = "<group>"; };
+		1FE2AEF81DA6F345006BAD21 /* app icon 20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 20x20.png"; sourceTree = "<group>"; };
+		1FE2AEF91DA6F345006BAD21 /* app icon 29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 29x29.png"; sourceTree = "<group>"; };
+		1FE2AEFA1DA6F345006BAD21 /* app icon 40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 40x40.png"; sourceTree = "<group>"; };
+		1FE2AEFB1DA6F345006BAD21 /* app icon 58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 58x58.png"; sourceTree = "<group>"; };
+		1FE2AEFC1DA6F345006BAD21 /* app icon 76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 76x76.png"; sourceTree = "<group>"; };
+		1FE2AEFD1DA6F345006BAD21 /* app icon 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 80x80.png"; sourceTree = "<group>"; };
+		1FE2AEFE1DA6F345006BAD21 /* app icon 152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 152x152.png"; sourceTree = "<group>"; };
 		1FFFD7C41DA58D9D00EDE776 /* PunchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchButton.h; sourceTree = "<group>"; };
 		1FFFD7C51DA58D9D00EDE776 /* PunchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchButton.m; sourceTree = "<group>"; };
 		1FFFD7C71DA5959200EDE776 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bean.jpg; sourceTree = "<group>"; };
@@ -149,6 +165,14 @@
 		1FFFD7B81DA576D100EDE776 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1FE2AEF81DA6F345006BAD21 /* app icon 20x20.png */,
+				1FE2AEF91DA6F345006BAD21 /* app icon 29x29.png */,
+				1FE2AEFA1DA6F345006BAD21 /* app icon 40x40.png */,
+				1FE2AEFB1DA6F345006BAD21 /* app icon 58x58.png */,
+				1FE2AEFC1DA6F345006BAD21 /* app icon 76x76.png */,
+				1FE2AEFD1DA6F345006BAD21 /* app icon 80x80.png */,
+				1FE2AEFE1DA6F345006BAD21 /* app icon 152x152.png */,
+				1F1ABD131DA6EA1E000B72E8 /* app icon 167x167.png */,
 				1FFFD7D11DA5988A00EDE776 /* goCup.png */,
 				1FFFD7C71DA5959200EDE776 /* bean.jpg */,
 				1FFFD7C81DA5959200EDE776 /* cup.png */,
@@ -198,6 +222,7 @@
 				TargetAttributes = {
 					1F4B531E1D7671850000B126 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = QG8X6Q7J3C;
 					};
 				};
 			};
@@ -224,11 +249,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE2AF021DA6F345006BAD21 /* app icon 58x58.png in Resources */,
 				1F4B53351D7671850000B126 /* LaunchScreen.storyboard in Resources */,
 				1FFFD7CB1DA5959200EDE776 /* bean.jpg in Resources */,
 				1FFFD7D21DA5988A00EDE776 /* goCup.png in Resources */,
+				1FE2AF041DA6F345006BAD21 /* app icon 80x80.png in Resources */,
+				1FE2AF011DA6F345006BAD21 /* app icon 40x40.png in Resources */,
+				1FE2AEFF1DA6F345006BAD21 /* app icon 20x20.png in Resources */,
 				1FFFD7CD1DA5959200EDE776 /* logo.png in Resources */,
+				1FE2AF031DA6F345006BAD21 /* app icon 76x76.png in Resources */,
+				1FE2AF051DA6F345006BAD21 /* app icon 152x152.png in Resources */,
 				1F4B53321D7671850000B126 /* Assets.xcassets in Resources */,
+				1F1ABD141DA6EA1E000B72E8 /* app icon 167x167.png in Resources */,
+				1FE2AF001DA6F345006BAD21 /* app icon 29x29.png in Resources */,
 				1F4B532D1D7671850000B126 /* Main.storyboard in Resources */,
 				1FFFD7CC1DA5959200EDE776 /* cup.png in Resources */,
 				1FFFD7CE1DA5959200EDE776 /* wood.png in Resources */,
@@ -365,9 +398,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QG8X6Q7J3C;
 				INFOPLIST_FILE = PunchCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Branvis-Software.PunchCard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.branvis.beanPunchCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -376,9 +410,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QG8X6Q7J3C;
 				INFOPLIST_FILE = PunchCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Branvis-Software.PunchCard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.branvis.beanPunchCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

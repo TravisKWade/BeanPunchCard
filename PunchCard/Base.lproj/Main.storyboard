@@ -27,7 +27,8 @@
                                             <constraint firstAttribute="height" constant="100" id="0NB-t2-a9f"/>
                                             <constraint firstAttribute="width" constant="100" id="S49-EH-CRY"/>
                                         </constraints>
-                                        <state key="normal" title="1" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="1" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -40,7 +41,8 @@
                                             <constraint firstAttribute="width" constant="100" id="0cC-P6-fnn"/>
                                             <constraint firstAttribute="height" constant="100" id="YMp-5W-bHW"/>
                                         </constraints>
-                                        <state key="normal" title="2" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="2" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -53,7 +55,8 @@
                                             <constraint firstAttribute="width" constant="100" id="CTt-k2-4YF"/>
                                             <constraint firstAttribute="height" constant="100" id="Y7E-Rd-AXG"/>
                                         </constraints>
-                                        <state key="normal" title="3" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="3" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -66,7 +69,8 @@
                                             <constraint firstAttribute="width" constant="100" id="dlK-Vj-8XE"/>
                                             <constraint firstAttribute="height" constant="100" id="yWv-jT-VLo"/>
                                         </constraints>
-                                        <state key="normal" title="4" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="4" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -79,7 +83,8 @@
                                             <constraint firstAttribute="height" constant="100" id="QFy-9v-J78"/>
                                             <constraint firstAttribute="width" constant="100" id="yCm-UB-UoU"/>
                                         </constraints>
-                                        <state key="normal" title="5" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="5" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -92,7 +97,8 @@
                                             <constraint firstAttribute="height" constant="100" id="OcH-6Y-8iq"/>
                                             <constraint firstAttribute="width" constant="100" id="dAp-4n-0x6"/>
                                         </constraints>
-                                        <state key="normal" title="6" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="6" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -105,7 +111,8 @@
                                             <constraint firstAttribute="height" constant="100" id="Fif-eu-pql"/>
                                             <constraint firstAttribute="width" constant="100" id="fU0-ae-RyI"/>
                                         </constraints>
-                                        <state key="normal" title="7" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="7" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -118,21 +125,25 @@
                                             <constraint firstAttribute="height" constant="100" id="BBL-iq-SmT"/>
                                             <constraint firstAttribute="width" constant="100" id="DM3-wO-3e3"/>
                                         </constraints>
-                                        <state key="normal" title="8" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="8" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="punchButtonPressed:" destination="VSe-40-my5" eventType="touchUpInside" id="tZf-fo-Rym"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlj-pi-OxC" customClass="PunchButton">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlj-pi-OxC" customClass="PunchButton">
+                                        <color key="backgroundColor" red="0.93677734374999999" green="0.93677734374999999" blue="0.93677734374999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="6dh-PR-bhZ"/>
                                             <constraint firstAttribute="width" constant="100" id="Z9v-jS-eWQ"/>
                                         </constraints>
-                                        <state key="normal" title="10" image="goCup.png">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="26"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="FREE" backgroundImage="goCup.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="punchButtonPressed:" destination="VSe-40-my5" eventType="touchUpInside" id="oef-cK-csk"/>
@@ -144,7 +155,8 @@
                                             <constraint firstAttribute="width" constant="100" id="5An-ko-JJW"/>
                                             <constraint firstAttribute="height" constant="100" id="uQV-HN-ovR"/>
                                         </constraints>
-                                        <state key="normal" title="9" image="bean.jpg">
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <state key="normal" title="9" backgroundImage="bean.jpg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -153,12 +165,12 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-Nr-55n">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="dte-vQ-8Su"/>
+                                            <constraint firstAttribute="height" constant="40" id="dte-vQ-8Su"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOW-hj-biO" userLabel="Spacer View 6">

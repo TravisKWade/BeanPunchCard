@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Customer+CoreDataClass.h"
 
 @interface CoreDataHelper : NSObject
 
@@ -17,6 +18,7 @@
 
 - (void) addCustomerWithFirstName:(NSString *) firstName andLastName:(NSString *) lastName withCompletion: (void (^)(BOOL success))completion;
 - (NSArray *) getAllCustomers;
-- (void) 
+
+- (void) punchCountChanged:(BOOL) punchAdded forCustomer:(Customer *) customer;
 
 @end

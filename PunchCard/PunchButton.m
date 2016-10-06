@@ -20,19 +20,23 @@
 
 #pragma mark - setter helpers
 
-- (void) setPunch {
+- (BOOL) setPunch {
     if (self.punched) {
         self.punched = NO;
         [self setBackgroundColor:[UIColor whiteColor]];
-        [self setImage:[UIImage imageNamed:@"bean.jpg"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"bean.jpg"] forState:UIControlStateNormal];
         
         [self setAlpha:1];
+        
+        return NO;
     } else {
         self.punched = YES;
         
-        [self setImage:[UIImage imageNamed:@"cup.png"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"cup.png"] forState:UIControlStateNormal];
         [self setBackgroundColor:[UIColor blackColor]];
         [self setAlpha:.7];
+        
+        return YES;
     }
 }
 

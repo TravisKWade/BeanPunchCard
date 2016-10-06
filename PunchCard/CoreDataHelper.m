@@ -8,7 +8,7 @@
 
 #import "CoreDataHelper.h"
 #import "AppDelegate.h"
-#import "Customer+CoreDataClass.h"
+
 
 @implementation CoreDataHelper
 
@@ -73,6 +73,39 @@ static CoreDataHelper *coreDataHelper;
     NSArray *customers = [self.context executeFetchRequest:fetchRequest error:&error];
     
     return customers;
+}
+
+#pragma mark - Put Methods
+
+- (void) punchCountChanged:(BOOL) punchAdded forCustomer:(Customer *) customer {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Customer" inManagedObjectContext:self.context];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"firstName = %@ AND lastName = %@", customer.firstName, customer.lastName]];
+    
+    NSError *error;
+    NSArray *fetchedCustomers = [self.context executeFetchRequest:fetchRequest error:&error];
+    
+    if (fetchedCustomers.count > 0) {
+        Customer *savedCustomer = [fetchedCustomers objectAtIndex:0];
+        
+        if (punchAdded) {
+            if (savedCustomer.punchCount + 1 == 10) {
+                savedCustomer.punchCount = 0;
+            } else {
+                savedCustomer.punchCount++;
+            }
+        } else {
+            if (savedCustomer.punchCount <= 1) {
+                savedCustomer.punchCount = 0;
+            } else {
+                savedCustomer.punchCount--;
+            }
+        }
+        
+        [self.context save:&error];
+    }
+    
 }
 
 @end

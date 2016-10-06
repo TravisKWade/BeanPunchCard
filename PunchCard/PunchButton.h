@@ -12,6 +12,6 @@
 
 @property (nonatomic) BOOL punched;
 
-- (void) setPunch;
+- (BOOL) setPunch;
 
 @end
