@@ -374,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NI-nC-XcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403.90625" y="539.6484375"/>
+            <point key="canvasLocation" x="403" y="753"/>
         </scene>
         <!--Card Holders-->
         <scene sceneID="klO-Oc-TqW">
@@ -383,27 +383,18 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6cj-m9-VvO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BcR-EO-IpX">
-                                <rect key="frame" x="0.0" y="120" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BcR-EO-IpX" id="3Gs-GK-nes">
-                                    <frame key="frameInset" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="VSe-40-my5" kind="showDetail" identifier="counterSegue" id="fBM-Ec-ZOF"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" red="0.91067401960000005" green="0.8935321128" blue="0.74621269960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.16898437499999999" green="0.1188629724" blue="0.076525294100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.91067401960000005" green="0.8935321128" blue="0.74621269960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" red="0.91067401960000005" green="0.8935321128" blue="0.74621269960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.16898437499999999" green="0.1188629724" blue="0.076525294100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="rFq-sC-ygb" id="SFC-Hc-bUc"/>
                             <outlet property="delegate" destination="rFq-sC-ygb" id="vrG-gW-L57"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Card Holders" id="p8w-r1-qWq">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="pfa-cA-ULw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pfa-cA-ULw">
                             <color key="tintColor" red="0.16898437499999999" green="0.1188629724" blue="0.076525294100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Mcg-h2-T79" kind="popoverPresentation" identifier="addCustomerSegue" popoverAnchorBarButtonItem="pfa-cA-ULw" id="DUz-v6-a1z">
@@ -414,11 +405,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="6cj-m9-VvO" id="Xb6-HF-LdL"/>
+                        <segue destination="VSe-40-my5" kind="showDetail" identifier="counterSegue" id="Kzl-vt-5tt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5N1-He-pfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="38"/>
+            <point key="canvasLocation" x="1501" y="38"/>
         </scene>
         <!--Add Customer View Controller-->
         <scene sceneID="GWp-w4-xcG">
@@ -501,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaF-9h-fZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568.75" y="-35.7421875"/>
+            <point key="canvasLocation" x="2411" y="-97"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DDg-xT-2EE">
@@ -534,7 +526,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nda-WE-s5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-230" y="304"/>
+            <point key="canvasLocation" x="-830" y="323"/>
         </scene>
     </scenes>
     <resources>
@@ -544,6 +536,6 @@
         <image name="wood.png" width="3367" height="1858"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fBM-Ec-ZOF"/>
+        <segue reference="Kzl-vt-5tt"/>
     </inferredMetricsTieBreakers>
 </document>

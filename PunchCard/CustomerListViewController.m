@@ -86,7 +86,8 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"counterSegue" sender:indexPath];
+    NSIndexPath *newPath = indexPath;
+    [self performSegueWithIdentifier:@"counterSegue" sender:newPath];
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
