@@ -24,7 +24,12 @@
     if (self.punched) {
         self.punched = NO;
         [self setBackgroundColor:[UIColor whiteColor]];
-        [self setBackgroundImage:[UIImage imageNamed:@"bean.jpg"] forState:UIControlStateNormal];
+        
+        if(self.tag == 10) {
+            [self setBackgroundImage:[UIImage imageNamed:@"goCup.png"] forState:UIControlStateNormal];
+        } else {
+            [self setBackgroundImage:[UIImage imageNamed:@"bean.jpg"] forState:UIControlStateNormal];
+        }
         
         [self setAlpha:1];
         

@@ -20,6 +20,7 @@
     [super viewDidLoad];
     
     self.errorLabel.hidden = YES;
+    self.addCustomerButton.layer.cornerRadius = 10;
 }
 
 - (void)didReceiveMemoryWarning {

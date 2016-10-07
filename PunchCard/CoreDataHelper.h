@@ -17,7 +17,7 @@
 + (CoreDataHelper *) sharedManager;
 
 - (void) addCustomerWithFirstName:(NSString *) firstName andLastName:(NSString *) lastName withCompletion: (void (^)(BOOL success))completion;
-- (NSArray *) getAllCustomers;
+- (NSDictionary *) getAllCustomers;
 
 - (void) punchCountChanged:(BOOL) punchAdded forCustomer:(Customer *) customer;
 

@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
+    self.customerSectionsList = [[self.customerList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +35,11 @@
      if ([segue.identifier isEqualToString:@"counterSegue"]) {
          CounterViewController *counterVC = (CounterViewController *)segue.destinationViewController;
          NSIndexPath *indexPath = (NSIndexPath *) sender;
-         counterVC.currentCustomer = [self.customerList objectAtIndex:indexPath.row];
+         
+         NSString *sectionTitle = [self.customerSectionsList objectAtIndex:indexPath.section];
+         NSArray *customersInSection = [self.customerList objectForKey:sectionTitle];
+
+         counterVC.currentCustomer = [customersInSection objectAtIndex:indexPath.row];
      } else {
          AddCustomerViewController *addCustomerVC = (AddCustomerViewController *)segue.destinationViewController;
          addCustomerVC.delegate = self;
@@ -45,16 +50,23 @@
 
 - (void) customerAdded {
     self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
+    self.customerSectionsList = [[self.customerList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     [self.tableView reloadData];
 }
 
 #pragma mark - table view cells
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.customerList.count;
 }
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.customerList.count;
+    NSString *sectionTitle = [self.customerSectionsList objectAtIndex:section];
+    NSArray *customersInSection = [self.customerList objectForKey:sectionTitle];
+    return customersInSection.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [self.customerSectionsList objectAtIndex:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,7 +76,10 @@
         cell = [[UITableViewCell alloc] init];
     }
     
-    Customer *customer = [self.customerList objectAtIndex:indexPath.row];
+    NSString *sectionTitle = [self.customerSectionsList objectAtIndex:indexPath.section];
+    NSArray *customersInSection = [self.customerList objectForKey:sectionTitle];
+    
+    Customer *customer = [customersInSection objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", customer.firstName, customer.lastName];
     return cell;
@@ -74,5 +89,9 @@
     [self performSegueWithIdentifier:@"counterSegue" sender:indexPath];
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return self.customerSectionsList;
+}
 
 @end

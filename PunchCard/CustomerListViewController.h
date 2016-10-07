@@ -13,7 +13,8 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 
-@property (strong, nonatomic) NSArray *customerList;
+@property (strong, nonatomic) NSDictionary *customerList;
+@property (strong, nonatomic) NSArray *customerSectionsList;
 
 @end
 

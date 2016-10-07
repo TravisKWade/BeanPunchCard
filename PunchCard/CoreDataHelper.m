@@ -60,19 +60,55 @@ static CoreDataHelper *coreDataHelper;
 
 #pragma mark - Get Methods
 
-- (NSArray *) getAllCustomers {
+- (NSDictionary *) getAllCustomers {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Customer" inManagedObjectContext:self.context];
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES selector:@selector(caseInsensitiveCompare:)];
-    NSArray *sortDescriptors = [NSArray arrayWithObject: sorter];
+    NSSortDescriptor *secondSort = [[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+    NSArray *sortDescriptors = @[sorter, secondSort];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     NSError *error;
     NSArray *customers = [self.context executeFetchRequest:fetchRequest error:&error];
     
-    return customers;
+    NSMutableDictionary *groupedCustomers = [[NSMutableDictionary alloc] init];
+    NSMutableArray *currentLetterCustomers = [[NSMutableArray alloc] init];
+    NSString *customerLetter;
+    
+    for (int i = 0; i < customers.count; i++) {
+        Customer *customer = [customers objectAtIndex:i];
+        
+        NSString *currentLetter = [[customer.firstName substringToIndex:1] uppercaseString];
+        
+        if (!customerLetter) {
+            customerLetter = currentLetter;
+        }
+        
+        if ([customerLetter isEqualToString:currentLetter]) {
+            [currentLetterCustomers addObject:customer];
+            
+            NSLog(@"%@", currentLetterCustomers);
+        } else {
+            NSLog(@"%@", currentLetterCustomers);
+            [groupedCustomers setObject:[[NSMutableArray alloc] initWithArray:currentLetterCustomers] forKey:customerLetter];
+            NSLog(@"%@", groupedCustomers);
+            
+            [currentLetterCustomers removeAllObjects];
+            customerLetter = currentLetter;
+            [currentLetterCustomers addObject:customer];
+            NSLog(@"%@", currentLetterCustomers);
+        }
+        
+        NSLog(@"%@", groupedCustomers);
+    }
+    
+    // make sure to add the last customers
+    [groupedCustomers setObject:[[NSMutableArray alloc] initWithArray:currentLetterCustomers] forKey:customerLetter];
+    NSLog(@"%@", groupedCustomers);
+    
+    return groupedCustomers;
 }
 
 #pragma mark - Put Methods
@@ -90,17 +126,9 @@ static CoreDataHelper *coreDataHelper;
         Customer *savedCustomer = [fetchedCustomers objectAtIndex:0];
         
         if (punchAdded) {
-            if (savedCustomer.punchCount + 1 == 10) {
-                savedCustomer.punchCount = 0;
-            } else {
-                savedCustomer.punchCount++;
-            }
+            savedCustomer.punchCount++;
         } else {
-            if (savedCustomer.punchCount <= 1) {
-                savedCustomer.punchCount = 0;
-            } else {
-                savedCustomer.punchCount--;
-            }
+            savedCustomer.punchCount--;
         }
         
         [self.context save:&error];
