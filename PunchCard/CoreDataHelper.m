@@ -88,25 +88,20 @@ static CoreDataHelper *coreDataHelper;
         
         if ([customerLetter isEqualToString:currentLetter]) {
             [currentLetterCustomers addObject:customer];
-            
-            NSLog(@"%@", currentLetterCustomers);
         } else {
-            NSLog(@"%@", currentLetterCustomers);
             [groupedCustomers setObject:[[NSMutableArray alloc] initWithArray:currentLetterCustomers] forKey:customerLetter];
-            NSLog(@"%@", groupedCustomers);
             
             [currentLetterCustomers removeAllObjects];
             customerLetter = currentLetter;
             [currentLetterCustomers addObject:customer];
-            NSLog(@"%@", currentLetterCustomers);
         }
         
-        NSLog(@"%@", groupedCustomers);
     }
     
     // make sure to add the last customers
-    [groupedCustomers setObject:[[NSMutableArray alloc] initWithArray:currentLetterCustomers] forKey:customerLetter];
-    NSLog(@"%@", groupedCustomers);
+    if (customerLetter) {
+        [groupedCustomers setObject:[[NSMutableArray alloc] initWithArray:currentLetterCustomers] forKey:customerLetter];
+    }
     
     return groupedCustomers;
 }
