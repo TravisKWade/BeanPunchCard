@@ -39,19 +39,54 @@ static CoreDataHelper *coreDataHelper;
 - (void) addCustomerWithFirstName:(NSString *) firstName andLastName:(NSString *) lastName withCompletion: (void (^)(BOOL success))completion {
     if(firstName.length > 0) {
         if (coreDataHelper.context) {
-        Customer *customer = [NSEntityDescription insertNewObjectForEntityForName:@"Customer" inManagedObjectContext:self.context];
-        customer.firstName = firstName;
-        customer.lastName = lastName;
-        customer.punchCount = 0;
-        
-        NSError *error;
-        [coreDataHelper.context save:&error];
-        
-        if (!error) {
-            completion(YES);
-        } else {
-            completion(NO);
+            Customer *customer = [NSEntityDescription insertNewObjectForEntityForName:@"Customer" inManagedObjectContext:self.context];
+            customer.firstName = firstName;
+            customer.lastName = lastName;
+            customer.punchCount = 0;
+            
+            NSError *error;
+            [coreDataHelper.context save:&error];
+            
+            if (!error) {
+                completion(YES);
+            } else {
+                completion(NO);
+            }
         }
+    } else {
+        completion(NO);
+    }
+}
+
+#pragma mark - Update Methods
+
+- (void) updateCustomerWithFirstName:(NSString *) firstName andLastName:(NSString *) lastName forCustomer:(Customer *) customer withCompletion: (void (^)(BOOL success))completion {
+    if(firstName.length > 0) {
+        if (coreDataHelper.context) {
+            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Customer" inManagedObjectContext:self.context];
+            [fetchRequest setEntity:entity];
+            [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"firstName = %@ AND lastName = %@", customer.firstName, customer.lastName]];
+            
+            NSError *error;
+            NSArray *fetchedCustomers = [self.context executeFetchRequest:fetchRequest error:&error];
+            
+            if (fetchedCustomers.count > 0) {
+                Customer *savedCustomer = [fetchedCustomers objectAtIndex:0];
+                
+                savedCustomer.firstName = firstName;
+                savedCustomer.lastName = lastName;
+
+                [self.context save:&error];
+                
+                if (!error) {
+                    completion(YES);
+                } else {
+                    completion(NO);
+                }
+            } else {
+                completion(NO);
+            }
         }
     } else {
         completion(NO);

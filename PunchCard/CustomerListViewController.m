@@ -40,15 +40,30 @@
          NSArray *customersInSection = [self.customerList objectForKey:sectionTitle];
 
          counterVC.currentCustomer = [customersInSection objectAtIndex:indexPath.row];
+     } else if ([segue.identifier isEqualToString:@"updateSegue"]) {
+         EditCustomerViewController *editVC = (EditCustomerViewController *)segue.destinationViewController;
+         NSIndexPath *indexPath = (NSIndexPath *) sender;
+         
+         NSString *sectionTitle = [self.customerSectionsList objectAtIndex:indexPath.section];
+         NSArray *customersInSection = [self.customerList objectForKey:sectionTitle];
+         
+         editVC.editCustomer = [customersInSection objectAtIndex:indexPath.row];
+         editVC.delegate = self;
      } else {
          AddCustomerViewController *addCustomerVC = (AddCustomerViewController *)segue.destinationViewController;
          addCustomerVC.delegate = self;
      }
  }
 
-#pragma mark - add customer delegate
+#pragma mark -  customer delegates
 
 - (void) customerAdded {
+    self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
+    self.customerSectionsList = [[self.customerList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    [self.tableView reloadData];
+}
+
+- (void) customerUpdated {
     self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
     self.customerSectionsList = [[self.customerList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     [self.tableView reloadData];
@@ -93,6 +108,26 @@
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     return self.customerSectionsList;
+}
+
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *editButton = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+                                    {
+                                        [self performSegueWithIdentifier:@"updateSegue" sender:indexPath];
+                                    }];
+    editButton.backgroundColor = [UIColor colorWithRed:43/255 green:30/255 blue:20/255 alpha:1.0];
+    
+    return @[editButton];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
 }
 
 @end

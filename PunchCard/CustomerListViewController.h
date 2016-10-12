@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AddCustomerViewController.h"
+#import "EditCustomerViewController.h"
 
-@interface CustomerListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, AddCustomerDelegate>
+@interface CustomerListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, AddCustomerDelegate, UpdateCustomerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 

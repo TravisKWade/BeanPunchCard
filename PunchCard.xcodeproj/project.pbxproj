@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F1ABD141DA6EA1E000B72E8 /* app icon 167x167.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1ABD131DA6EA1E000B72E8 /* app icon 167x167.png */; };
+		1F2F3CA41DAE77DB000F7B1E /* EditCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F3CA31DAE77DB000F7B1E /* EditCustomerViewController.m */; };
 		1F324C781D9A8EBF00F85B48 /* Customer+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F324C751D9A8EBF00F85B48 /* Customer+CoreDataClass.m */; };
 		1F324C791D9A8EBF00F85B48 /* Customer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F324C771D9A8EBF00F85B48 /* Customer+CoreDataProperties.m */; };
 		1F4B53241D7671850000B126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B53231D7671850000B126 /* main.m */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		1F1ABD131DA6EA1E000B72E8 /* app icon 167x167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app icon 167x167.png"; sourceTree = "<group>"; };
+		1F2F3CA21DAE77DB000F7B1E /* EditCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCustomerViewController.h; sourceTree = "<group>"; };
+		1F2F3CA31DAE77DB000F7B1E /* EditCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCustomerViewController.m; sourceTree = "<group>"; };
 		1F324C741D9A8EBF00F85B48 /* Customer+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Customer+CoreDataClass.h"; path = "../Customer+CoreDataClass.h"; sourceTree = "<group>"; };
 		1F324C751D9A8EBF00F85B48 /* Customer+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Customer+CoreDataClass.m"; path = "../Customer+CoreDataClass.m"; sourceTree = "<group>"; };
 		1F324C761D9A8EBF00F85B48 /* Customer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Customer+CoreDataProperties.h"; path = "../Customer+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				1F4B533E1D76754E0000B126 /* CounterViewController.m */,
 				1FD9714E1D934C0700A694E5 /* AddCustomerViewController.h */,
 				1FD9714F1D934C0700A694E5 /* AddCustomerViewController.m */,
+				1F2F3CA21DAE77DB000F7B1E /* EditCustomerViewController.h */,
+				1F2F3CA31DAE77DB000F7B1E /* EditCustomerViewController.m */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				1F4B53271D7671850000B126 /* AppDelegate.m in Sources */,
 				1F324C791D9A8EBF00F85B48 /* Customer+CoreDataProperties.m in Sources */,
 				1FFFD7C61DA58D9D00EDE776 /* PunchButton.m in Sources */,
+				1F2F3CA41DAE77DB000F7B1E /* EditCustomerViewController.m in Sources */,
 				1FD971501D934C0700A694E5 /* AddCustomerViewController.m in Sources */,
 				1F4B53301D7671850000B126 /* PunchCard.xcdatamodeld in Sources */,
 				1F4B53241D7671850000B126 /* main.m in Sources */,
@@ -405,7 +411,7 @@
 				DEVELOPMENT_TEAM = QG8X6Q7J3C;
 				INFOPLIST_FILE = PunchCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.branvis.beanPunchCard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.branvis.punchCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -417,7 +423,7 @@
 				DEVELOPMENT_TEAM = QG8X6Q7J3C;
 				INFOPLIST_FILE = PunchCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.branvis.beanPunchCard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.branvis.punchCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
