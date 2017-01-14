@@ -166,4 +166,22 @@ static CoreDataHelper *coreDataHelper;
     
 }
 
+#pragma mark - Delete
+
+- (void) deleteCustom:(Customer *) customer {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Customer" inManagedObjectContext:self.context];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"firstName = %@ AND lastName = %@", customer.firstName, customer.lastName]];
+    
+    NSError *error;
+    NSArray *fetchedCustomers = [self.context executeFetchRequest:fetchRequest error:&error];
+    
+    if (fetchedCustomers.count > 0) {
+        Customer *savedCustomer = [fetchedCustomers objectAtIndex:0];
+        [self.context deleteObject:savedCustomer];
+        [self.context save:&error];
+    }
+}
+
 @end

@@ -10,6 +10,7 @@
 #import "CoreDataHelper.h"
 #import "Customer+CoreDataClass.h"
 #import "CounterViewController.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface CustomerListViewController ()
 
@@ -111,13 +112,22 @@
 }
 
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     UITableViewRowAction *editButton = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
                                     {
+                                        [Answers logContentViewWithName:@"Edit" contentType:@"Edit" contentId:@"1234" customAttributes:@{@"Edit started":@20, @"Screen Orientation":@"Landscape"}];
                                         [self performSegueWithIdentifier:@"updateSegue" sender:indexPath];
                                     }];
     editButton.backgroundColor = [UIColor colorWithRed:43/255 green:30/255 blue:20/255 alpha:1.0];
     
-    return @[editButton];
+    UITableViewRowAction *deleteButton = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+                                        {
+                                            [Answers logContentViewWithName:@"Delete" contentType:@"Delete" contentId:@"1234" customAttributes:@{@"Delete started":@20, @"Screen Orientation":@"Landscape"}];
+                                            [self deleteUserAlert:indexPath];
+                                        }];
+    deleteButton.backgroundColor = [UIColor redColor];
+    
+    return @[deleteButton, editButton];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -130,4 +140,45 @@
     return YES;
 }
 
+#pragma mark - delete user
+
+- (void) deleteUserAlert:(NSIndexPath *) indexPath {
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Delete User"
+                                 message:@"Are you sure that you want to delete this customer?\nAll punchcard data will be lost."
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   NSString *sectionTitle = [self.customerSectionsList objectAtIndex:indexPath.section];
+                                   NSArray *customersInSection = [self.customerList objectForKey:sectionTitle];
+                                   
+                                   Customer *customer = [customersInSection objectAtIndex:indexPath.row];
+                                   [self deleteUser:customer];
+                               }];
+    
+    UIAlertAction* cancelButton = [UIAlertAction
+                               actionWithTitle:@"Cancel"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   [self.tableview reloadData];
+                               }];
+    
+    
+    [alert addAction:okButton];
+    [alert addAction:cancelButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+
+}
+
+- (void) deleteUser:(Customer *) customer {
+    [CoreDataHelper.sharedManager deleteCustom:customer];
+    
+    self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
+    self.customerSectionsList = [[self.customerList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    [self.tableview reloadData];
+}
 @end

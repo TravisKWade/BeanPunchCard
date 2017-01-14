@@ -21,5 +21,6 @@
 - (NSDictionary *) getAllCustomers;
 
 - (void) punchCountChanged:(BOOL) punchAdded forCustomer:(Customer *) customer;
+- (void) deleteCustom:(Customer *) customer;
 
 @end
