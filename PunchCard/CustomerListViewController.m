@@ -59,12 +59,14 @@
 #pragma mark -  customer delegates
 
 - (void) customerAdded {
+    [Answers logContentViewWithName:@"New Customer" contentType:@"New Customer" contentId:@"1234" customAttributes:@{@"New Customer":@20, @"Screen Orientation":@"Landscape"}];
     self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
     self.customerSectionsList = [[self.customerList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     [self.tableView reloadData];
 }
 
 - (void) customerUpdated {
+    [Answers logContentViewWithName:@"Customer Update" contentType:@"Customer Update" contentId:@"1234" customAttributes:@{@"Customer Update":@20, @"Screen Orientation":@"Landscape"}];
     self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
     self.customerSectionsList = [[self.customerList allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     [self.tableView reloadData];
@@ -175,6 +177,7 @@
 }
 
 - (void) deleteUser:(Customer *) customer {
+    [Answers logContentViewWithName:@"Delete User" contentType:@"Delete User" contentId:@"1234" customAttributes:@{@"Delete user":@20, @"Screen Orientation":@"Landscape"}];
     [CoreDataHelper.sharedManager deleteCustom:customer];
     
     self.customerList = [CoreDataHelper.sharedManager getAllCustomers];
